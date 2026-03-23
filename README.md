@@ -14,47 +14,25 @@ Built for teams who juggle many Softr apps and want a faster, more organized lis
 - **Sync** — Toolbar choices and pins use `chrome.storage.sync` (Chrome profile sync where enabled)  
 - **Open pinned app** — Uses the same Studio API pattern as the product (`GET /v1/applications/{id}` → `home_page_id` → open editor)
 
-## Install locally (GitHub beta)
+## For Softr developers (beta install)
 
-Chrome will show this as an **unpacked** extension (Developer mode). That’s normal until the [Chrome Web Store](https://chrome.google.com/webstore) listing is live.
+No Git required. Chrome may say “Developer mode” — that’s OK until the extension is on the Chrome Web Store.
 
-### 1. Download the project (no coding tools needed)
+1. **Download** — On GitHub, green **Code** → **Download ZIP**.
+2. **Unzip** the file. Open folders until you see **`extension`** (GitHub often wraps it in one extra folder, e.g. `…-main`).
+3. In Chrome’s address bar, paste **`chrome://extensions`** and press Enter.  
+   *(Microsoft Edge: **`edge://extensions`**)*
+4. Turn **Developer mode** on (top right) → **Load unpacked** → choose the **`extension`** folder (the one that contains **`manifest.json`**).
+5. **Reload** [studio.softr.io](https://studio.softr.io/) (refresh the tab). Your apps list should show the new toolbar.
 
-1. Open this repository on GitHub in your browser.
-2. Click the green **Code** button.
-3. Click **Download ZIP**.
-4. Open your **Downloads** folder and **unzip** the file (double-click it on Mac, or right-click → **Extract all…** on Windows).
-5. Open the unzipped folder. You should see an **`extension`** folder inside it.  
-   - If you see *another* folder first (GitHub often names it `repo-name-main`), open that — **`extension`** is inside.
+**Updates:** `chrome://extensions` → **Reload** on this extension. If you downloaded a new ZIP, pick the new **`extension`** folder again with **Load unpacked** (or replace the old folder first).
 
-You will point Chrome at that **`extension`** folder in the next step. That folder must contain **`manifest.json`** when you open it (along with files like `content.js`).
-
-### 2. Load it in Chrome or Edge
-
-1. Open **`chrome://extensions`** in Chrome, or **`edge://extensions`** in Edge.
-2. Turn **Developer mode** **ON** (toggle top-right in Chrome; in Edge, allow **Developer mode** if prompted).
-3. Click **Load unpacked**.
-4. A file picker opens. Navigate to the **`extension`** folder from step 1 and **select that folder** (the one that shows `manifest.json` in the list). Click **Select** / **Open**.
-
-If Chrome shows an error, you probably chose the wrong folder — go up or down one level until the folder you pick directly contains `manifest.json`.
-
-### 3. Use it
-
-Open [studio.softr.io](https://studio.softr.io/) and go to your apps list. You should see the organizer toolbar above the grid.
-
-**Updates:** Download a fresh ZIP from GitHub, unzip it, and replace your old `extension` folder (or load the new `extension` folder the same way). Then open `chrome://extensions` and click **Reload** on **Softr Studio App Organizer**.
-
-**Keyboard shortcut:** Default **Ctrl+K** (Windows/Linux) or **⌘K** (Mac) focuses the name filter. Change it under **Keyboard shortcuts** at the bottom of the extensions page.
+**Tip:** **Ctrl+K** / **⌘K** focuses the search box (change under **Keyboard shortcuts** on the extensions page).
 
 <details>
-<summary><strong>Optional — install with Git (developers)</strong></summary>
+<summary>Install with Git (optional)</summary>
 
-```bash
-git clone <YOUR_REPO_URL>.git
-cd <repo-folder>
-```
-
-Then in step 2, choose the **`extension`** folder inside that clone.
+Clone the repo, then use step 4 on the **`extension`** folder inside the clone.
 
 </details>
 

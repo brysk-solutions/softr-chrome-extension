@@ -16,25 +16,58 @@ Built for teams who juggle many Softr apps and want a faster, more organized lis
 
 ## For Softr developers (beta install)
 
-No Git required. Chrome may show **Developer mode** — that’s normal for a beta loaded from a folder.
+You do **not** need Git or coding tools. You are only downloading a zip file and telling Chrome where it lives.
 
-1. **Download** — On GitHub, green **Code** → **Download ZIP**.
-2. **Unzip** the file. Open folders until you see **`extension`** (GitHub often wraps it in one extra folder, e.g. `…-main`).
-3. In Chrome’s address bar, paste **`chrome://extensions`** and press Enter.  
-   *(Microsoft Edge: **`edge://extensions`**)*
-4. Turn **Developer mode** on (top right) → **Load unpacked** → choose the **`extension`** folder (the one that contains **`manifest.json`**).
-5. **Reload** [studio.softr.io](https://studio.softr.io/) (refresh the tab). Your apps list should show the new toolbar.
+Chrome may show words like **Developer mode** or **Load unpacked**. That only means “you are installing an extension from a folder instead of the Chrome Web Store.” That is expected for this beta.
 
-**Updates:** `chrome://extensions` → **Reload** on this extension. If you downloaded a new ZIP, pick the new **`extension`** folder again with **Load unpacked** (or replace the old folder first).
+### Step 1 — Download the zip from GitHub
 
-**Tip:** **Ctrl+K** / **⌘K** focuses the search box (change under **Keyboard shortcuts** on the extensions page).
+1. Go to the **main page** of this project on GitHub (the page that shows the list of files and folders, and this README).
+2. Look near the top right of the file list for a **green button** labeled **Code**.
+3. Click **Code**. A small menu opens.
+4. Click **Download ZIP**. Your browser saves a zip file (often in your **Downloads** folder).
 
-<details>
-<summary>Install with Git (optional)</summary>
+### Step 2 — Unzip and find the `extension` folder
 
-Clone the repo, then use step 4 on the **`extension`** folder inside the clone.
+1. Open the zip file you downloaded. On **Mac**, double-click it. On **Windows**, right-click it and choose **Extract all…**, then confirm.
+2. You should see folders and files. Look for one named **`extension`** (all lowercase).  
+   - If you **don’t** see **`extension`** yet, open the **only** folder you see, then look again for **`extension`** inside it.
+3. Open **`extension`** once and check: you should see files including **`manifest.json`**. If you see that file, you have the correct folder. **Leave this window open** or remember this path — you will pick this folder in Step 4.
 
-</details>
+### Step 3 — Open Chrome’s Extensions page
+
+1. Click Chrome’s address bar at the top (where you type website addresses).
+2. Type or paste exactly: **`chrome://extensions`**
+3. Press **Enter**.  
+   - **Microsoft Edge:** use **`edge://extensions`** the same way.
+
+You should see a page titled **Extensions** and a list (maybe empty) of installed extensions.
+
+### Step 4 — Turn on Developer mode and load the extension
+
+1. On that Extensions page, find the switch **Developer mode** (Chrome: usually **top right**). Turn it **on**.
+2. New buttons appear. Click **Load unpacked**.
+3. A file chooser opens. Navigate to the **`extension`** folder from **Step 2** — the folder that **directly contains** `manifest.json`.
+4. Click **Select** / **Open** (wording depends on your computer).
+
+If Chrome shows an error, you probably selected the wrong folder. Go **up one level** or **into** the `extension` folder and try **Load unpacked** again.
+
+### Step 5 — See it in Softr Studio
+
+1. Open [studio.softr.io](https://studio.softr.io/) and go to your **apps** list (where all your Softr apps appear).
+2. **Refresh the page** (reload the tab, or press **F5** / **Ctrl+R** / **⌘R**).  
+3. You should see the new **toolbar** (sort, filter, pins) above your apps.
+
+### When you get an updated zip later
+
+1. Download and unzip the new zip the same way as Step 1–2.
+2. Go back to **`chrome://extensions`** (Step 3).
+3. Find **Softr Studio App Organizer** in the list and click **Reload** (circular arrow).  
+   - If the update changed a lot, you may need **Remove** and then **Load unpacked** again on the **new** `extension` folder.
+
+### Optional: keyboard shortcut for search
+
+While you are on the Softr apps list, **Ctrl+K** (Windows) or **⌘K** (Mac) moves the cursor into the **Filter by name** box. To change that shortcut: Extensions page → **Keyboard shortcuts** (link at the bottom) → find this extension.
 
 ## Permissions
 
